@@ -101,7 +101,8 @@ class SentinelAuthentication implements Authentication
      */
     public function createReminderCode($user)
     {
-        $reminder = Reminder::exists($user) ?: Reminder::create($user);
+      $reminder = Reminder::exists($user) ? Reminder::where('user_id', $user->id)
+        ->whereNull('completed_at')->first() : Reminder::create($user);
 
         return $reminder->code;
     }
