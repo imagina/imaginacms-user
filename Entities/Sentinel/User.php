@@ -132,8 +132,8 @@ class User extends EloquentUser implements UserInterface, AuthenticatableContrac
   public function organizations()
   {
     return $this->belongsToMany(
-      \Modules\Isite\Entities\Organization::class,
-      'isite__user_organization');
+      \Modules\Itenant\Entities\Organization::class,
+      'itenant__user_organization');
   }
 
   public function addresses()
