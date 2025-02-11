@@ -187,7 +187,7 @@ class User extends EloquentUser implements UserInterface, AuthenticatableContrac
 
   public function getCacheClearableData()
   {
-    $baseUrls = [config("app.url"), $this->url];
+    $baseUrls = [config("app.url")];
 
     $urls = ['urls' => $baseUrls];
 
