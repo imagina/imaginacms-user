@@ -1,5 +1,5 @@
 {
-  "name": "imagina/iuser",
+  "name": "imagina/user-module",
   "description": "",
   "type": "laravel-module",
   "license": "MIT",
